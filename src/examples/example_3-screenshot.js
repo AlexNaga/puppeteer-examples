@@ -4,11 +4,11 @@ const puppeteer = require("puppeteer");
 
 (async () => {
   try {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ headless: false }); // default is true
     const page = await browser.newPage();
-    await page.goto("https://example.com");
+    await page.goto(env.NOVA_URL);
 
-    await page.pdf({ path: `${env.OUTPUT_DIR}/example_2.pdf`, format: "A4" });
+    await page.screenshot({ path: `${env.OUTPUT_DIR}/example_1.png` });
 
     await browser.close();
   } catch (error) {

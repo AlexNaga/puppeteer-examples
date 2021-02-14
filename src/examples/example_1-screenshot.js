@@ -8,7 +8,7 @@ const puppeteer = require("puppeteer");
     const page = await browser.newPage();
     await page.goto("https://example.com");
 
-    await page.screenshot({ path: `${env.OUTPUT_DIR}/example.png` });
+    await page.screenshot({ path: `${env.OUTPUT_DIR}/example_1.png` });
 
     await browser.close();
   } catch (error) {
