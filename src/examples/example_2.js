@@ -2,6 +2,7 @@ require("dotenv").config();
 const env = process.env;
 const puppeteer = require("puppeteer");
 
+// Example of saving as a .pdf
 (async () => {
   try {
     const browser = await puppeteer.launch();
