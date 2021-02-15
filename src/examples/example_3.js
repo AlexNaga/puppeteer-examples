@@ -9,9 +9,21 @@ const puppeteer = require("puppeteer");
     const page = await browser.newPage();
     await page.goto(env.NOVA_URL);
 
-    await page.screenshot({ path: `${env.OUTPUT_DIR}/example_3.png` });
+    const usernameInput = "#login_name";
+    const passwordInput = "#login_pwd";
+    const loginBtn = "#login_nonguest";
 
-    await browser.close();
+    await page.waitForSelector(usernameInput, { visible: true });
+    await page.waitForSelector(passwordInput, { visible: true });
+    await page.waitForSelector(loginBtn, { visible: true });
+
+    // await page.waitForNavigation({ waitUntil: "networkidle0" });
+
+    await page.type(usernameInput, env.NOVA_USERNAME);
+    await page.type(passwordInput, env.NOVA_PASSWORD);
+    await page.click(loginBtn);
+
+    // await browser.close();
   } catch (error) {
     console.error(error);
   }
