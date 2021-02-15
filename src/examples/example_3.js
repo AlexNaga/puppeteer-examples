@@ -2,7 +2,7 @@ require("dotenv").config();
 const env = process.env;
 const puppeteer = require("puppeteer");
 
-// Example of taking a screenshot in Nova
+// Example of typing and clicking
 (async () => {
   try {
     const browser = await puppeteer.launch({ headless: false }); // default is true
