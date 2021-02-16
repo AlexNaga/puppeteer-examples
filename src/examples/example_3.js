@@ -23,7 +23,7 @@ const puppeteer = require("puppeteer");
     await page.type(passwordInput, env.NOVA_PASSWORD);
     await page.click(loginBtn);
 
-    // await browser.close();
+    await browser.close();
   } catch (error) {
     console.error(error);
   }
