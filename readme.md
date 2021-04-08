@@ -4,7 +4,9 @@ A collection of example scripts using Puppeteer.
 
 ## Installation
 
-After you have installed Node.js and NPM. Run the following command to install Puppeteer.
+### Requirements
+
+For this to work you will need to have [Node.js and NPM](https://nodejs.org/) installed. NPM is distributed with Node.js. Which means that when you download Node.js, you automatically get NPM installed on your computer. After installation, run the following command to install Puppeteer.
 
 ``` bash
 npm install
