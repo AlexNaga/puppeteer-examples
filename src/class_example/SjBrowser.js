@@ -1,6 +1,6 @@
 const { Browser } = require("./Browser");
 
-class NovaBrowser extends Browser {
+class SjBrowser extends Browser {
   constructor({ url, headless }) {
     // Call the parent class' constructor with options
     super({ url, headless });
@@ -11,8 +11,8 @@ class NovaBrowser extends Browser {
   }
 
   async login() {
-    console.log("Login to Nova");
+    console.log("Login to SJ");
   }
 }
 
-module.exports = { NovaBrowser };
+module.exports = { SjBrowser };
