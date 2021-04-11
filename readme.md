@@ -30,7 +30,7 @@ npm run start 2
 
 For Puppeteer docs, see [pptr.dev](https://pptr.dev/)
 
-For Jest Puppeteer docs, see [pptr.dev](https://jestjs.io/docs/puppeteer/)
+[Jest Puppeteer docs](https://jestjs.io/docs/puppeteer/)
 
 ## License
 
