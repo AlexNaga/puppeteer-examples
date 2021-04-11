@@ -7,15 +7,12 @@ const puppeteer = require("puppeteer");
     const page = await browser.newPage();
     await page.goto("https://sj.se");
 
-    const pageTitle = await page.title();
-    console.log(`The page title is: ${pageTitle}`);
-
-    page.on("console", (msg) => console.log(msg.text()));
+    console.log(await page.title());
 
     // Function that is run within the page
-    await page.evaluate(async () => {
-      console.log(document.title);
-    });
+    const pageTitle = await page.evaluate(async () => document.title);
+
+    console.log(`The page title is: ${pageTitle}`);
 
     await browser.close();
   } catch (error) {

@@ -6,6 +6,7 @@ const puppeteer = require("puppeteer");
     const browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
 
+    // Show all logs from the page
     page.on("console", (msg) => console.log(msg.text()));
 
     // Add our own function to the page
