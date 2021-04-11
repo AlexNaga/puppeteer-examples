@@ -3,7 +3,10 @@ const puppeteer = require("puppeteer");
 // Example of clicking and typing
 (async () => {
   try {
-    const browser = await puppeteer.launch({ headless: false }); // default is true
+    const browser = await puppeteer.launch({
+      headless: false, // Default is true
+      slowMo: 300, // Time in ms
+    });
     const page = await browser.newPage();
     await page.setViewport({ width: 1000, height: 900 });
     await page.goto("https://www.sj.se");
